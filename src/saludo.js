@@ -1,4 +1,4 @@
 function saludo(nombre){
-return "Hola Francisco"
+return "Hola " + nombre + "!";
 }
-module.exports = saludo
+module.exports = saludo;
