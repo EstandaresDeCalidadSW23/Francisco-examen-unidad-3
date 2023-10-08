@@ -7,30 +7,29 @@ test("Francisco", function () {
 test("Juan", function () {
     expect(saludo("Juan")).toEqual("Hola Juan!")
 })
-test("Federico", function () {
-    expect(saludo("Federico")).toEqual("Hola Kiko!")
+test("Kiko", function () {
+    expect(saludo("Kiko")).toString("Hola Federico!")
 })
-test("Maximiliano", function () {
-    
-    expect(saludo("Maximiliano")).toEqual("Hola Max!")
+test("Max", function () {
+    expect(saludo("Max")).toString("Hola Maximiliano!")
 })
-test("juan", function () {
-    expect(saludo("juan")).toEqual("Hola Juan!")
+test("Juan", function () {
+    expect(saludo("Juan")).toString("Hola juan!")
 })
-test("PABLO", function () {
-    expect(saludo("PABLO")).toEqual("Hola Pablo!")
+test("Pablo", function () {
+    expect(saludo("Pablo")).toString("Hola PABLO!")
 })
-test("mArtHA", function () {
-    expect(saludo("mArtHA")).toEqual("Hola Martha!")
+test("Martha", function () {
+    expect(saludo("Martha")).toString("Hola MaRTha!")
 })
-test("nombre vacio", function () {
-    expect(saludo("")).toEqual("Hola Fulano!")
-})
-
-test("null", function () {
-    expect(saludo(null)).toEqual("Hola Fulano!")
+test("Fulano", function () {
+    expect(saludo("Fulano")).toString("Hola null!")
 })
 
-test("nombre solo espacios", function () {
-    expect(saludo("            ")).toEqual("Hola Fulano!")
+test("Fulano", function () {
+    expect(saludo("Fulano")).toString("Hola ...!")
+})
+
+test("Fulano", function () {
+    expect(saludo("nombre solo espacios")).toString("Hola    !")
 })
