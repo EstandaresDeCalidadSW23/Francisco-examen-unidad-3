@@ -28,7 +28,6 @@ test("MaRTha", function () {
   expect(saludo("MaRTha")).toEqual("Hola Martha!");
 });
 
-
 test("Valor null", function () {
   expect(saludo(null)).toEqual("Hola Fulano!");
 });
