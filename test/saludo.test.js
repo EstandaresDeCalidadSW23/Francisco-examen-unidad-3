@@ -1,35 +1,42 @@
-const saludo = require("../src/saludo")
+const saludo = require("../src/saludo");
 
 test("Francisco", function () {
-    expect(saludo("Francisco")).toEqual("Hola Francisco!")
-})
+  expect(saludo("Francisco")).toEqual("Hola Francisco!");
+});
 
 test("Juan", function () {
-    expect(saludo("Juan")).toEqual("Hola Juan!")
-})
-test("Kiko", function () {
-    expect(saludo("Kiko")).toString("Hola Federico!")
-})
-test("Max", function () {
-    expect(saludo("Max")).toString("Hola Maximiliano!")
-})
-test("Juan", function () {
-    expect(saludo("Juan")).toString("Hola juan!")
-})
-test("Pablo", function () {
-    expect(saludo("Pablo")).toString("Hola PABLO!")
-})
-test("Martha", function () {
-    expect(saludo("Martha")).toString("Hola MaRTha!")
-})
-test("Fulano", function () {
-    expect(saludo("Fulano")).toString("Hola null!")
-})
+  expect(saludo("Juan")).toEqual("Hola Juan!");
+});
 
-test("Fulano", function () {
-    expect(saludo("Fulano")).toString("Hola ...!")
-})
+test("Federico", function () {
+  expect(saludo("Federico")).toEqual("Hola Kiko!");
+});
 
-test("Fulano", function () {
-    expect(saludo("nombre solo espacios")).toString("Hola    !")
-})
+test("Maximiliano", function () {
+  expect(saludo("Maximiliano")).toEqual("Hola Max!");
+});
+
+test("juan", function () {
+  expect(saludo("juan")).toEqual("Hola Juan!");
+});
+
+test("PABLO", function () {
+  expect(saludo("PABLO")).toEqual("Hola Pablo!");
+});
+
+test("MaRTha", function () {
+  expect(saludo("MaRTha")).toEqual("Hola Martha!");
+});
+
+
+test("Valor null", function () {
+  expect(saludo(null)).toEqual("Hola Fulano!");
+});
+
+test("Cadena vacía", function () {
+  expect(saludo("")).toEqual("Hola Fulano!");
+});
+
+test("Cadena solo espacios", function () {
+  expect(saludo("      ")).toEqual("Hola Fulano!");
+});
